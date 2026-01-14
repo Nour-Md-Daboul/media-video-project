@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>مشغّل فيديو</title>
+    <link rel="stylesheet" href="{% static 'player/static/css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="app">
+      <h1 class="title">
+        مشغّل فيديو مع تغيير الجودة تلقائيًا ويدويًا<br />
+        <span
+          >Adaptive Video Player with Automatic and Manual Quality
+          Selection</span
+        >
+      </h1>
+
+      <div class="player-card">
+        <div class="video-wrapper">
+          <video id="video" controls muted autoplay></video>
+          <span id="qualityBadge" class="quality-badge">360p</span>
+          <div id="spinner" class="spinner hidden"></div>
+        </div>
+
+        <div class="controls">
+          <select id="qualitySelect"></select>
+          <button id="autoBtn">AUTO</button>
+        </div>
+
+        <p id="status" class="status">Manual mode</p>
+      </div>
+    </div>
+
+    <script src="{% static 'player/static/js/player.js' %}"></script>
+  </body>
+</html>
