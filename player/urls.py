@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import video_qualities
+from .views import index
 
 urlpatterns = [
-    path('api/video/', video_qualities),
+    path('', index, name='index'),
 ]

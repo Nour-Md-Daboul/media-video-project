@@ -3,24 +3,18 @@
 <html lang="ar">
   <head>
     <meta charset="UTF-8" />
-    <title>مشغّل فيديو</title>
-    <link rel="stylesheet" href="{% static 'player/static/css/style.css' %}" />
+    <title>Adaptive Player</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
 
   <body>
     <div class="app">
-      <h1 class="title">
-        مشغّل فيديو مع تغيير الجودة تلقائيًا ويدويًا<br />
-        <span
-          >Adaptive Video Player with Automatic and Manual Quality
-          Selection</span
-        >
-      </h1>
+      <h1 class="title">مشغّل فيديو تلقائي ويدوي</h1>
 
       <div class="player-card">
         <div class="video-wrapper">
-          <video id="video" controls muted autoplay></video>
-          <span id="qualityBadge" class="quality-badge">360p</span>
+          <video id="video" controls autoplay muted></video>
+          <span id="qualityBadge" class="quality-badge">144p</span>
           <div id="spinner" class="spinner hidden"></div>
         </div>
 
@@ -30,9 +24,11 @@
         </div>
 
         <p id="status" class="status">Manual mode</p>
+        <p id="speed" class="speed">Speed: -- Mbps</p>
       </div>
     </div>
 
-    <script src="{% static 'player/static/js/player.js' %}"></script>
+    <!-- ✅ سكربت واحد فقط كـ module -->
+    <script type="module" src="{% static 'js/player.js' %}"></script>
   </body>
 </html>
