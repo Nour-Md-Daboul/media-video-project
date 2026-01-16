@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$@y%(+=^%c&2=#2&f69-yb$tpo8934z^hvgvt+%s(bq5874bei
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['.onrender.com' ]
 
 
 # Application definition
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'video-project.wsgi.application'
+WSGI_APPLICATION = 'video_project.wsgi.application'
 
 
 # Database
