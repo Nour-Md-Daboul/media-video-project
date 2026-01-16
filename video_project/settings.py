@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'video_project.wsgi.application'
+WSGI_APPLICATION = 'video-project.wsgi.application'
 
 
 # Database
